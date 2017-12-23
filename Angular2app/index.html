@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <!-- Загрузка библиотек -->
+    <!-- Polyfill(s) для старых браузеров -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="shared/css/main.css">
+    <!--Настройка SystemJS -->
+    <script src="systemjs.config.js"></script>
+
+    <script>
+      System.import('app').catch(function(err){ 
+          console.error(err); 
+        });
+    </script>
+</head>
+
+
+<!--Отображение приложения -->
+<body id="global-body">
+
+
+<div class="bg-bot">
+    <div class="karkas">
+        <div class="search-bascet" style="display: none;"></div>
+        <div class="header">
+            <a  routerLink="/" routerLinkActive="active" href="/">
+                <img src="shared/img/Logo.gif" alt=""></a>
+            <div class="head-left">
+                <p>Мы в соцсетях</p>
+                <a href="http://vk.com"><img src="shared/img/vk.jpg" alt=""></a>
+                <a href="http://facebook.com"><img src="shared/img/face.jpg" alt=""></a>
+                <a href="http://twitter.com"><img src="shared/img/twitter.jpg" alt=""></a>
+            </div>
+            <div class="head-center">
+                <a href="">Сайт для агенств</a>
+                <div class="search">
+                    <input type="text" id="search-field" name="gg">
+                    <img src="shared/img/search-btn2.gif" id="s-btn" alt="">
+                </div>
+                <p>Круглосуточный контакт-центр <span>0 800 500 600</span></p>
+            </div>
+        </div>
+        <my-app>Loading...</my-app>
+
+
+
+
+<footer class="footer">
+    <div class="container-fluid" id="footer_div">
+        <div class="row">
+            <div class="payMethod_new col-md-3">
+                <div class="techDetails">
+                    <p style="margin: 0 0 5px 0;"><strong>Партнеры:</strong></p>
+                    <div class="paymentWays">
+                        <!--<a href="http://www.fcbank.com.ua/"><img src="/images_dev/payment/fk"></a>
+                        <img src="/images/other/logos.png/">-->
+                        <a title="Райффайзен Банк Аваль" href="https://www.aval.ua/" target="_blank"><img src="//agent.tui.ua/getmedia/6842f9ea-2375-4ce4-833c-5e6f3eb1250a/aval" alt="Райффайзен Банк Аваль"></a>
+                        <a title="Аккорд Банк" href="http://accordbank.com.ua/" target="_blank"><img src="http://www.tui.ua/getmedia/0730ecd8-89b7-4425-829f-1a57a9efa1bc/AkkordBank" alt="Аккорд Банк"></a>
+                        <a title="Приватбанк" href="https://privatbank.ua/ru/" target="_blank"><img src="//agent.tui.ua/getmedia/4689442b-671e-46d3-91c3-a9e72aa051ee/%d0%bf%d1%80%d0%b8%d0%b2%d0%b0%d1%822" alt="Приватбанк"></a>
+
+
+                        <img src="//agent.tui.ua/getmedia/f015c2c4-8ace-4280-9f06-0ba079cf544d/visa/" alt="" style="float:left;margin-top:3px">
+                    </div>
+                </div>
+                <div style="
+    font-style: italic;
+    font-size: 0.9em;
+    padding: 10px 10px 10px 105px;
+">Представленная на сайте информация носит справочный характер и не является публичной офертой</div>
+            </div>
+            <div class="col-md-7">
+                <p align="center" style="padding-top: 10px; padding-bottom: 10px; font-size: 11px;">
+                    Погода предоставлена&nbsp;службой&nbsp;<noindex><a href="http://www.gismeteo.ua/" rel="nofollow">Gismeteo</a></noindex></p>
+                <p align="center" style="font-size: 11px;">
+                    Вот и он! <a href="http://tripadvisor.ru" target="_blank">Рейтинг отелей</a> от<br>
+                    <a href="http://tripadvisor.ru" target="_blank"><img border="0" src="//agent.tui.ua/getmedia/4ec87378-9938-4a8c-9ed6-06dcf51b836b/tripadviser_logo"></a></p>
+                <p align="center" style="font-size: 11px; padding-top: 23px;">
+                    <a href="/getmedia/a3353ce7-e59a-41a3-b085-f40a1347ad6d/pravila-polzovaniya-saitom-tui-ua/" target="_blank">Правила пользования сайтом TUI.UA</a>
+                </p>
+            </div>
+            <div class="worldOfTui col-md-2">
+                <div style="clear: both;">
+                    <div style="position:relative;margin-top:20px">
+                        <div style="color:#888888; margin-bottom:5px;">Мы в соцсетях:</div>
+                        <div>
+                            <a href="" target="_blank"><img src="//agent.tui.ua/getmedia/0108eccc-2eb5-44ce-8c25-efddabf2bc98/facebook"></a>
+                            <a href=" " target="_blank"><img src="//agent.tui.ua/getmedia/093755d5-98b7-478d-8fe1-082bf3177e3f/youtube/"></a>
+                            <a href="" target="_blank" style="margin-left:2px;"><img src="http://agent.tui.ua/getmedia/90bcd6f4-8293-4d48-84a8-b2c781994c3d/Instagram-2/"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="register">
+                <p>Лицензия на Туроператорскую деятельность ООО «ТТВК»:<br>
+                    серия АЕ № 272718 выдана 13 марта 2014 года.</p>
+            </div>
+            <div class="register">
+                <p class="copy">Travel.ua - ведущий европейский туроператор в Украине © 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</div>
+</body>
+
+</html>

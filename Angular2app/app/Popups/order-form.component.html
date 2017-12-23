@@ -1,0 +1,27 @@
+<form action="../regist-done/register-done.php" method="get">
+
+    <div class="single-tyrist">
+        <h2>Информация о туристе </h2>
+        <div class="input-box">
+            <input type="text" name="surname" placeholder="Surname">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="document" placeholder="Серия и номер загранпаспорта">
+            <p>Годен до</p>
+            <input type="date" name="document_date" placeholder="Год-месяц-число"><br>
+            <p>Дата рождения</p>
+            <input type="date" name="age" placeholder="Год-месяц-число">
+        </div>
+        <div class="info-box">
+            <b>Обратите внимание</b> <br>
+            <p>Имя и Фамилию необходимо заполнять латинскими буквами, как в загранпаспорте</p>
+        </div>
+    </div>
+
+    <div class="turist-foot">
+        <h1>Дополнительная информация</h1>
+        <input type="text" name="contact" placeholder="Контактный телефон">
+        <input type="label" name="hum" value="" style="display:none">
+        <input type="label" name="id_order" value="" style="display:none">
+        <input type="submit" name="submitData" value="Забронировать">
+    </div>
+</form>

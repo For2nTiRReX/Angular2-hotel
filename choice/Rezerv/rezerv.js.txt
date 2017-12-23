@@ -1,0 +1,354 @@
+;(function ($) {
+Hotel = function(name,country,price,komfort,type,img,about){
+    this.name=name;
+    this.country=country;
+    this.price=price;
+    this.comfort=komfort;
+    this.about=about;
+    this.type=type;
+    this.img=img;
+    //function(){}
+};
+
+    Plaza = new Hotel("Plaza","Турция",20000,"4 звезды", "Пляжный","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Mlaza = new Hotel("Mlaza","Австрия",20000,"3 звезды",        "Экстрим","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Klaza = new Hotel("Klaza","Болгария",20000,"3 звезды",     "Пляжный","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Flaza = new Hotel("Flaza","Греция",20000,"3 звезды",                                               "Горнолыжные туры","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Olaza = new Hotel("Olaza","ОАЭ",20000,"3 звезды","Все включено","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Nlaza = new Hotel("Nlaza","Турция",20000,"3 звезды", "Экстрим","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+     Plaza2 = new Hotel("Plaza","Турция",20000,"5 звезды", "Экскурсионные туры","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Mlaza2 = new Hotel("Mlaza","Австрия",20000,"3 звезды",        "Экстрим","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Klaza2 = new Hotel("Klaza","Болгария",20000,"3 звезды",     "Пляжный","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Flaza2 = new Hotel("Flaza","Греция",20000,"5 звезд",                                               "Горнолыжные туры","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Olaza2 = new Hotel("Olaza","ОАЭ",20000,"3 звезды","Все включено","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+    Nlaza2 = new Hotel("Nlaza","Турция",20000,"3 звезды", "Экстрим","Img/Q_HOTEL_3.jpg","Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. ");
+
+
+vipolnit=function (){ 
+    $(".single-hot").show();
+    $(".single-hot > img:last").hide();
+var home= [Plaza,Mlaza,Klaza,Flaza,Olaza,Nlaza,Plaza2,Mlaza2,Klaza2,Flaza2,Olaza2,Nlaza2];
+var valueCountry=$("#countryS option:selected").html();
+var valueType=$("#typeS option:selected").html();
+var valueKomf=$("#komfS option:selected").html();
+var valueCena1=$("#input1:text").val();
+var valueCena2=$("#input2:text").val();
+var peredaemOtel1,peredaemOtel2,peredaemOtel3,peredaemOtel4,peredaemOtel5;
+//console.log(cikl());
+zapolnit1 = function (hotelZ){
+        $("#single-hot1 >#countryA").text(hotelZ.country);
+        $("#single-hot1 >#countryB").text(hotelZ.type);
+        $("#single-hot1 > #shi>img").attr("src",hotelZ.img);
+        $("#single-hot1 > h1").text(hotelZ.name);
+        $("#single-hot1 > .display").text(hotelZ.about);
+        $("#single-hot1 > .cena-d >span").text(hotelZ.price);
+        if(hotelZ.comfort.indexOf("4")!=-1){
+        $("#single-hot1 > img:not(img:last)").css("display","inline");    
+        }
+        if(hotelZ.comfort.indexOf("5")!=-1){
+        $("#single-hot1 > img").css("display","inline");    
+        }
+    }
+zapolnit2 = function (hotelZ){
+        $("#single-hot2 >#countryA").text(hotelZ.country);
+        $("#single-hot2 >#countryB").text(hotelZ.type);
+        $("#single-hot2 > #shi>img").attr("src",hotelZ.img);
+        $("#single-hot2 > h1").text(hotelZ.name);
+        $("#single-hot2 > .display").text(hotelZ.about);
+        $("#single-hot2 > .cena-d >span").text(hotelZ.price);
+    }
+zapolnit3 = function (hotelZ){
+        $("#single-hot3 >#countryA").text(hotelZ.country);
+        $("#single-hot3 >#countryB").text(hotelZ.type);
+        $("#single-hot3 > #shi>img").attr("src",hotelZ.img);
+        $("#single-hot3 > h1").text(hotelZ.name);
+        $("#single-hot3 > .display").text(hotelZ.about);
+        $("#single-hot3 > .cena-d >span").text(hotelZ.price);
+    }
+zapolnit4 = function (hotelZ){
+        $("#single-hot4 >#countryA").text(hotelZ.country);
+        $("#single-hot4 >#countryB").text(hotelZ.type);
+        $("#single-hot4 > #shi>img").attr("src",hotelZ.img);
+        $("#single-hot4 > h1").text(hotelZ.name);
+        $("#single-hot4 > .display").text(hotelZ.about);
+        $("#single-hot4 > .cena-d >span").text(hotelZ.price);
+    }
+zapolnit5 = function (hotelZ){
+        $("#single-hot5 >#countryA").text(hotelZ.country);
+        $("#single-hot5 >#countryB").text(hotelZ.type);
+        $("#single-hot5 > #shi>img").attr("src",hotelZ.img);
+        $("#single-hot5 > h1").text(hotelZ.name);
+        $("#single-hot5 > .display").text(hotelZ.about);
+        $("#single-hot5 > .cena-d >span").text(hotelZ.price);
+    }
+clear = function (){
+        $(".single-hot").hide();
+        $(".hotel-holder h2").text("Ничего не найдено");
+    }
+
+
+    /* console.log(valueCena1);
+     console.log(valueCena2);
+     console.log(valueCountry);
+     console.log(valueType);
+     console.log(valueKomf);*/
+    
+    for(var i=0;i<home.length;i++){  //dlia 1 bloka   
+    if (home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf        && home[i].price>=valueCena1  &&  home[i].price<=valueCena2){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //all
+    }
+    else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //type komf country
+    }  
+        else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueKomf==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //type price country
+    }
+        else if( home[i].comfort===valueKomf && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueCountry==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //type price komf
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueType==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //country price komf
+    }
+        else if(home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2  && valueCountry==="Все" && valueType==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //comf price
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2==="" && valueType==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //country comf
+    }
+        else if(home[i].country===valueCountry && home[i].price>=valueCena1 && home[i].price<=valueCena2 && valueType==="Все" && valueKomf==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //country price
+    }
+        else if(home[i].comfort===valueKomf &&  valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2==="" && valueCountry==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //comf type
+    }
+        else if( valueCountry==="Все" &&  valueType.indexOf(home[i].type)!=-1 && home[i].price>=valueCena1 && home[i].price<=valueCena2  && valueKomf==="Все" ){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //type price
+    }
+         else if(home[i].country===valueCountry &&  valueType.indexOf(home[i].type)!=-1  &&   valueCena1===""  &&  valueCena2===""  && valueKomf==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+          //country type
+    }
+        else if(home[i].country===valueCountry && valueType==="Все" && valueKomf==="Все" &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //country
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+             // komf 
+    } 
+        else if(valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2===""  && valueKomf==="Все" &&  valueCountry==="Все"){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+           //type 
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && valueKomf==="Все" && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 ){
+        peredaemOtel1=home[i];
+        zapolnit1(peredaemOtel1);
+            //price
+    }       
+}
+
+if (peredaemOtel1!==undefined){
+    home.splice(home.indexOf(peredaemOtel1),1);    
+}
+if (peredaemOtel1===undefined){
+    clear();
+}
+    for(var i=0;i<home.length;i++){  //dlia 2 bloka   
+    if (home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf        && home[i].price>=valueCena1  &&  home[i].price<=valueCena2){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //all
+    }
+    else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //type komf country
+    }  
+        else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueKomf==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //type price country
+    }
+        else if( home[i].comfort===valueKomf && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueCountry==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //type price komf
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueType==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //country price komf
+    }
+        else if(home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2  && valueCountry==="Все" && valueType==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //comf price
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2==="" && valueType==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //country comf
+    }
+        else if(home[i].country===valueCountry && home[i].price>=valueCena1 && home[i].price<=valueCena2 && valueType==="Все" && valueKomf==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //country price
+    }
+        else if(home[i].comfort===valueKomf &&  valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2==="" && valueCountry==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //comf type
+    }
+        else if( valueCountry==="Все" &&  valueType.indexOf(home[i].type)!=-1 && home[i].price>=valueCena1 && home[i].price<=valueCena2  && valueKomf==="Все" ){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //type price
+    }
+         else if(home[i].country===valueCountry &&  valueType.indexOf(home[i].type)!=-1  &&   valueCena1===""  &&  valueCena2===""  && valueKomf==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+          //country type
+    }
+        else if(home[i].country===valueCountry && valueType==="Все" && valueKomf==="Все" &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //country
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+             // komf 
+    } 
+        else if(valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2===""  && valueKomf==="Все" &&  valueCountry==="Все"){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+           //type 
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && valueKomf==="Все" && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 ){
+        peredaemOtel2=home[i];
+        zapolnit2(peredaemOtel2);
+            //price
+    }       
+}
+
+if (peredaemOtel2!==undefined){
+    home.splice(home.indexOf(peredaemOtel2),1);    
+}
+if (peredaemOtel2===undefined){
+    $(".single-hot:not(#single-hot1)").hide();
+}
+    for(var i=0;i<home.length;i++){  //dlia 3 bloka   
+    if (home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf        && home[i].price>=valueCena1  &&  home[i].price<=valueCena2){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //all
+    }
+    else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1 && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //type komf country
+    }  
+        else if(home[i].country===valueCountry && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueKomf==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //type price country
+    }
+        else if( home[i].comfort===valueKomf && valueType.indexOf(home[i].type)!=-1  && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueCountry==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //type price komf
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2 && valueType==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //country price komf
+    }
+        else if(home[i].comfort===valueKomf &&  home[i].price>=valueCena1  &&  home[i].price<=valueCena2  && valueCountry==="Все" && valueType==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //comf price
+    }
+        else if(home[i].country===valueCountry && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2==="" && valueType==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //country comf
+    }
+        else if(home[i].country===valueCountry && home[i].price>=valueCena1 && home[i].price<=valueCena2 && valueType==="Все" && valueKomf==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //country price
+    }
+        else if(home[i].comfort===valueKomf &&  valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2==="" && valueCountry==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //comf type
+    }
+        else if( valueCountry==="Все" &&  valueType.indexOf(home[i].type)!=-1 && home[i].price>=valueCena1 && home[i].price<=valueCena2  && valueKomf==="Все" ){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //type price
+    }
+         else if(home[i].country===valueCountry &&  valueType.indexOf(home[i].type)!=-1  &&   valueCena1===""  &&  valueCena2===""  && valueKomf==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+          //country type
+    }
+        else if(home[i].country===valueCountry && valueType==="Все" && valueKomf==="Все" &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //country
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && home[i].comfort===valueKomf &&  valueCena1===""  &&  valueCena2===""){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+             // komf 
+    } 
+        else if(valueType.indexOf(home[i].type)!=-1 &&  valueCena1===""  &&  valueCena2===""  && valueKomf==="Все" &&  valueCountry==="Все"){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+           //type 
+    } 
+        else if(valueCountry==="Все" && valueType==="Все" && valueKomf==="Все" && home[i].price>=valueCena1  &&  home[i].price<=valueCena2 ){
+        peredaemOtel3=home[i];
+        zapolnit3(peredaemOtel3);
+            //price
+    }       
+}
+if (peredaemOtel3!==undefined){
+    home.splice(home.indexOf(peredaemOtel3),1);    
+}
+if (peredaemOtel3===undefined){
+    $(".single-hot:not(#single-hot1, #single-hot2)").hide();
+}
+console.log(home);    
+    
+    
+  
+}
+  
+
+})(jQuery);

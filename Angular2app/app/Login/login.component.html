@@ -1,0 +1,33 @@
+<div class="container">
+	<h2>LOGIN.</h2>
+
+	<form [formGroup]="loginForm"  novalidate>
+		<div class="form-group">
+			<label for="userLogin">Login</label>
+
+			<input id="userLogin" type="text" class="form-control"
+				   formControlName="userLogin" required />
+
+			<div *ngIf="formErrors.userLogin" class="alert alert-danger">
+				{{ formErrors.userLogin }}
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="userPassword">Password</label>
+
+			<input id="userPassword" class="form-control"
+					  formControlName="userPassword" required>
+
+			<div *ngIf="formErrors.userPassword" class="alert alert-danger">
+				{{ formErrors.userPassword }}
+			</div>
+		</div>
+
+		<div *ngIf="messageBoxVisibility" class="alert alert-danger">
+			{{formErrorMessageBox}}
+		</div>
+
+		<button class="btn btn-default" (click)="login()">Login</button>
+	</form>
+</div>

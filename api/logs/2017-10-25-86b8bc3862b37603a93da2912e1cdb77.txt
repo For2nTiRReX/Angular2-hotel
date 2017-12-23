@@ -1,0 +1,15 @@
+Time : 01:49:48
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ?' at line 1
+Raw SQL : SELECT * FROM comments WHERE hotel_id = ? LIMIT = ?
+
+Time : 01:49:48
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ?' at line 1
+Raw SQL : SELECT * FROM comments WHERE hotel_id = ? LIMIT = ?
+
+Time : 01:47:15
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ?' at line 1
+Raw SQL : SELECT * FROM comments WHERE hotel_id = ? LIMIT = ?
+
+Time : 01:47:15
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ?' at line 1
+Raw SQL : SELECT * FROM comments WHERE hotel_id = ? LIMIT = ?

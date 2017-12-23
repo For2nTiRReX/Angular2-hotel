@@ -1,0 +1,19 @@
+<nav class="main-menu navbar navbar-default">
+	<ul class="navbar-nav">
+		<li><a routerLink="hotels/archive" routerLinkActive="active">Hotels</a></li>
+		<li><a href="/choice/choice.php">Выбор тура</a></li>
+		<li><a href="/Maps/map.php" >Страны и направления</a></li>
+		<li><a href="http://tyrist.ua/404/error.php" >Авиабилеты</a></li>
+		<li><a href="http://tyrist.ua/404/error.php" >Услуги</a></li>
+		<li><a href="http://tyrist.ua/404/error.php" >О компании</a></li>
+		<li><a routerLink="admin" routerLinkActive="active">Admin</a></li>
+		<li><a routerLink="login" routerLinkActive="active">Login</a></li>
+	</ul>
+</nav>
+
+<div id="sample-panel" class="theme-green">
+	<router-outlet></router-outlet>
+</div>
+<div class="popups-holder">
+	<order-form></order-form>
+</div>

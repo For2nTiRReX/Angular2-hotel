@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<link rel="stylesheet"   href="choice.css">
+<title>Tur.ua</title>
+</head>
+<body>
+  <div class="bg-bot">
+  <div class="karkas">
+    <div class="header">
+        <a href="file:///C:/Users/P%20C/Desktop/Diplom/Main/Main.html">
+        <img src="Img/Logo.gif" alt=""></a>
+        <div class="head-left">
+           <p>Мы в соцсетях</p>
+            <a href="http://vk.com"><img src="img/vk.jpg" alt=""></a>
+            <a href="http://facebook.com"><img src="img/face.jpg" alt=""></a>
+            <a href="http://twitter.com"><img src="Img/twitter.jpg" alt=""></a>
+        </div>
+        <div class="head-center">
+            <a href="">Сайт для агенств</a>
+            <div class="search">
+                <input type="text" id="search-field" name="">
+                <img src="img/search-btn2.gif" alt="">
+            </div>
+            <p>Круглосуточный контакт-центр <span>0 800 500 600</span></p>
+        </div>
+    </div>
+    
+    
+    <div class="menu-main">
+       <table border="0" cellpadding="0" cellspacing="0" >
+        <tbody>
+           <tr>
+            <td><a id="last" href="/toursearch" class="selected" >Выбор тура</a></td>
+            <td><a href="/destinations" >Страны и направления</a></td>
+            <td><a href="/avia-tickets" >Авиабилеты</a></td> 
+            <td><a href="/services" >Услуги</a></td> 
+            <td><a href="/about-us" >О компании</a></td>
+            <td><a href="/faq" >Вопросы и ответы</a></td>
+            <td><a  href="/retail" >Где купить</a></td>   
+           </tr>
+    </tbody>
+    </table>
+    </div>
+    
+    <div class="after-head">
+    <h1>Поиск тура</h1>
+    <hr>
+    <div class="find-holder">
+       <div class="find-holder-left">
+        <p>Страна/курорт:</p>
+        <select name="countryS" id="countryS">
+            <option value="allC">Все</option>
+            <option value="russia">Россия</option>
+            <option value="ukraine">Украина</option>
+            <option value="avstr">Австрия</option>
+            <option value="spain">Испания</option>
+            <option value="oae">ОАЭ</option>
+            <option value="tyrk">Турция</option>
+            <option value="italy">Италия</option>
+            <option value="chernog">Черногория</option>
+            <option value="cheh">Чехия</option>
+        </select>
+        <p>Вид отдыха:</p>
+        <select name="typeS" id="typeS">
+            <option value="allC">Все</option>
+            <option value="pliag">Пляжный отдых</option>
+            <option value="gori">Горнолыжные туры</option>
+            <option value="ekskyrs">Экскурсионные туры</option>
+            <option value="ekstrim">Экстрим</option>
+            <option value="lux">Все включено</option>
+        </select>
+        <p>Клас отеля:</p>
+        <select name="komfS" id="komfS">
+            <option value="allC">Все</option>
+            <option value="1">1 звезда</option>
+            <option value="2">2 звезды</option>
+            <option value="3">3 звезды</option>
+            <option value="4">4 звезды</option>
+            <option value="5">5 звезд</option>  
+        </select>
+        </div>
+        <div class="find-holder-center">
+        <p>Цена:</p>
+        <span>от</span>
+        <input id="input1" type="text" placeholder="0" style="width: 90px;" value="">
+        <span>до</span>
+        <input id="input2" type="text" placeholder="269000" style="width: 90px;" value="">
+        <span>Грн.</span>
+        </div>
+        <img src="Img/btn-find.png" alt="" onclick="vipolnit()">
+    </div>
+  </div>
+  
+  
+  <div class="hotel-holder">
+        <h2>Найдено</h2>
+         <div class='single-hot' id="single-hot1"> 
+         <a href='#' id="shi"><img src='Img/Hotel_GOLF_DEPANDANCE.jpg'></a>                          
+         <a href='#' id='countryA'>Чехия</a><a href='#' id='countryB'>Экскурсионные туры</a>          <br> 
+         <h1>GOLF DEPANDANCE</h1>
+         <span class="sp-m">Клас отеля</span>
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="" class="hide1">
+          <img src="Img/star-small.png" alt="" class="hide2">
+         <br>
+         <p class="display">Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. А если Вы не
+         Отель Golf находится в спокойной части Праги 5, недалеко от торгового центра Andel/Ангел и местной площадки для игры в гольф. Но не беспокойтесь...Центр Праги будет виден как на ладони. А если Вы не</p>
+         <div class="cena-d">
+             от<span>22 185 </span> грн.
+             <p>За номер</p>
+         </div>     
+         </div> 
+         <div class='single-hot' id="single-hot2"> 
+         <a href='#' id="shi"><img src='Img/OLSANKA.jpg'></a>                                        
+         <a href='#' id='countryA'>Чехия</a><a href='#' id='countryB'>Все включено</a> <br> 
+         <h1>OLSANKA</h1>
+         <span class="sp-m">Клас отеля</span>
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="" class="hide1">
+          <img src="Img/star-small.png" alt="" class="hide2">
+         <br>
+         <p class="display">Комплекс Ольшанка расположен в районе Жижков – Прага 3, который называется Монмартр. Расположенный в центре треугольника достопримечательностей Жижкова - парка Парукаржка, телебашни и жижковского ...</p>
+         <div class="cena-d">
+             от<span>24 735 </span>   грн.  
+             <p>За номер</p>
+         </div>     
+         </div> 
+         <div class='single-hot' id="single-hot3"> 
+         <a href='#' id="shi"><img src='Img/Q_HOTEL_3.jpg'></a>
+         <a href='#' id='countryA'>Израиль</a><a href='#' id='countryB'>Пляжный</a> <br> 
+         <h1>Q HOTE</h1>
+         <span class="sp-m">Клас отеля</span>
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+          <img src="Img/star-small.png" alt="" class="hide1">
+          <img src="Img/star-small.png" alt="" class="hide2">
+         <br>
+         <p class="display">отель находится в 6 км от центра г. Нетания и в 30 км от аэропорта Бен-Гурион.В отеле: отель состоит из двух 2-х этажных зданий. 40 номеров:</p>
+         <div class="cena-d">
+             от<span>30 600 </span> грн.    
+             <p>За номер</p>
+         </div>     
+         </div> 
+         <div class='single-hot' id="single-hot4"> 
+         <a href='#' id="shi"><img src='Img/HILTON_FUJAIRAH_RESORT.jpg'></a>                          
+         <a href='#' id='countryA'>ОАЭ</a><a href='#' id='countryB'>Пляжный</a> <br> 
+         <h1>HILTON FUJAIRAH RESORT</h1>
+         <span class="sp-m">Клас отеля</span>
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+          <img src="Img/star-small.png" alt="" class="hide1">
+          <img src="Img/star-small.png" alt="" class="hide2">
+         <br>
+         <p class="display">Отель расположен на береговой линии Оманского залива Индийского океана, в окружении просторного тропического сада. Несколько минут ходьбы от центра города и старого форта Al Hayl Fort.</p>
+         <div class="cena-d">
+             от<span>30 912 </span>грн.     
+             <p>За номер</p>
+         </div>     
+         </div> 
+         <div class='single-hot' id="single-hot5"> 
+         <a href='#' id="shi"><img src='Img/RILA_4.jpg'></a>                          
+         <a href='#' id='countryA'>Болгария</a><a href='#' id='countryB'>Горнолыжные туры</a> <br> 
+         <h1>GOLF DEPANDANCE</h1>
+         <span class="sp-m">Клас отеля</span>
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="">
+         <img src="Img/star-small.png" alt="" class="hide1">
+          <img src="Img/star-small.png" alt="" class="hide2">
+         <br>
+         <p class="display">Один из самых популярных отелей курорта; при отеле работает мини-клуб для детей от 1 до 3 лет и лыжный детский сад для детей от 3 до 7 лет (услуги платные), а также горнолыжная школа и большой лыжный ...</p>
+         <div class="cena-d">
+             от<span> 27 413 </span>  грн.    
+             <p>За номер</p>
+         </div>     
+         </div> 
+  </div>
+  
+
+
+
+        
+       <div class="footer">
+        <a href=""><img src="Img/Logo.gif" alt=""></a>  
+        <p>© Сеть туристических агентств Tur.ua. Tur.ua  - Украина. Использование <br>материалов сайта возможно только с письменного разрешения компании Tur.ua.</p>  
+        <div class="foot-r">
+        <strong style="font-size: 0.9em;">Круглосуточная горячая линия</strong><br>
+        <span style="font-size: 1.4em;">0 800 500 600</span><br>
+        <span style="font-size: 0.7em;">Звонки со стационарных телефонов в пределах Украины - бесплатно</span>
+    </div>
+       </div>
+
+
+   </div>
+  </div>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="JS/main.js"></script>    
+</body>
+</html>

@@ -1,0 +1,15 @@
+Time : 01:48:44
+SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'author' at row 1
+Raw SQL : INSERT INTO comments(id,hotel_id,text,author,date,approved) VALUES(:id,:hotel_id,:text,:author,:date,:approved)
+
+Time : 01:46:07
+SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'author' at row 1
+Raw SQL : INSERT INTO comments(id,hotel_id,text,author,date,approved) VALUES(:id,:hotel_id,:text,:author,:date,:approved)
+
+Time : 01:43:52
+SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'author' at row 1
+Raw SQL : INSERT INTO comments(id,hotel_id,text,author,date,approved) VALUES(:id,:hotel_id,:text,:author,:date,:approved)
+
+Time : 01:35:58
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : INSERT INTO comments(id,hotel_id,text,author,date,approved) VALUES(?,?,?,?,?,?)

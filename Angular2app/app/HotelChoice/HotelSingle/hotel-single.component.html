@@ -1,0 +1,105 @@
+<div class="hotel-single-wrapper" *ngIf="hotel">
+    <h1 class="hotel-title">{{hotel.title}}</h1>
+
+    <div class="hotel-info-holder">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="hotel-img">
+                    <a href=""><img src="{{hotel.thumbnail}}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="hotel-info">
+                    <div class="hotel-meta">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="meta-title">Hotel comfort</div>
+                                <div class="meta-value stars-holder">
+                                    <img src="/shared/img/star-small.png" alt=" " *ngFor="let comfort of counterRaiting(hotel.comfort)">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="meta-title">From</div>
+                                <div class="meta-value price-holder">
+                                    ${{hotel.price}}
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="meta-title">Country</div>
+                                <div class="meta-value country-holder">
+                                    {{hotel.country}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel-content">
+                        {{hotel.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hotel-comments-list></hotel-comments-list>
+
+    <hotel-comments-form></hotel-comments-form>
+
+    <div class="info-basket-holder">
+        <div class="basket-title">Бронирование туров на сайте – это удобно</div>
+        <em>Достаточно кликнуть на стоимость</em>
+        <div class="basket-single">
+            <div class="basket-single-l">1</div>
+            <div class="basket-single-r">
+                <p> Экономия времени</p>
+                Вы сами выбираете отель, даты вылета и продолжительность отдыха
+            </div>
+        </div>
+        <div class="basket-single">
+            <div class="basket-single-l">2</div>
+            <div class="basket-single-r">
+                <p> Бронирование  <br>дополнительных услуг</p>
+
+                Индивидуальный трансфер, страховка, экскурсии
+            </div>
+        </div>
+        <div class="basket-single">
+            <div class="basket-single-l">3</div>
+            <div class="basket-single-r">
+                <p>Подтверждение на e-mail</p>
+                Уведомление на e-mail с полной информацией о забронированном туре
+            </div>
+        </div>
+    </div>
+    <!--<div class="choice-tur">-->
+        <!--<form action="../register/register.php" method="get" >-->
+            <!--<div class="choice-tur-top">-->
+                <!--<p>Город вылета</p>-->
+                <!--<input type="text" name="country" placeholder="Киев"  value="">-->
+                <!--<input type="submit"  value="Выбрать">-->
+            <!--</div>-->
+            <!--<ul class="choice-tur-bot">-->
+                <!--<li>-->
+                    <!--<p>Кто поедет</p>-->
+                    <!--<select name="hum" id="komfS">-->
+                        <!--<option value="1">1 человек</option>-->
+                        <!--<option value="2">2 человека</option>-->
+                        <!--<option value="3">3 человека</option>-->
+                        <!--<option value="4">4 человека</option>-->
+                        <!--<option value="5">5 человек</option>-->
+                    <!--</select>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<p>Дата вылета</p>-->
+                    <!--<input type="date" name="date_off" placeholder="год-месяц-число" value="">-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<p>Количество дней</p>-->
+                    <!--<input type="text" name="days" placeholder="7" value="">-->
+                    <!--<input type="label" name="id_hotel" value="" style="display:none" >-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</form>-->
+    <!--</div>-->
+
+
+</div>

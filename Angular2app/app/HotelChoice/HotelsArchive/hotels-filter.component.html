@@ -1,0 +1,51 @@
+<div class="filters form-group">
+    <div class="after-head">
+        <h1>Поиск тура</h1>
+        <hr>
+        <div class="find-holder">
+            <div class="find-holder-left">
+                <form [formGroup]="filtersForm" novalidate>
+                    <div class="form-group">
+                        <label for="countryS">Страна/курорт:</label>
+                        <select class="form-control" name="countryS" id="countryS" formControlName="selectedCountry" [(ngModel)]="selectedCountry" >
+                            <option *ngFor="let c of countryFilterValues" [value]="c">{{c}}</option>
+                        </select>
+                    </div>
+                   <div class="form-group">
+                       <label for="typeS">Вид отдыха:</label>
+                       <select class="form-control" name="typeS" id="typeS">
+                           <option value="">Все</option>
+                           <option value="Пляжный отдых">Пляжный отдых</option>
+                           <option value="Горнолыжные туры">Горнолыжные туры</option>
+                           <option value="Экскурсионные туры">Экскурсионные туры</option>
+                           <option value="Экстрим">Экстрим</option>
+                           <option value="Все включено">Все включено</option>
+                       </select>
+                   </div>
+                    <div class="form-group">
+                        <label for="komfS">Клас отеля:</label>
+                        <select class="form-control" name="komfS" id="komfS" formControlName="selectedComfort" >
+                            <option *ngFor="let c of comfortFilterValues" [ngValue]="c">{{c}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <h2>Цена:</h2>
+                        <label for="priceMin">от</label>
+                        <input class="form-control" id="priceMin" type="text"  name="minPrice" formControlName="minPrice">
+                        <label for="priceMax">до</label>
+                        <input class="form-control" id="priceMax" type="text"  name="maxPrice" formControlName="maxPrice">
+                        <span>Грн.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="komfS">Поиск:</label>
+                        <input class="form-control" type="text" name="search" id="search" formControlName="keyWord" >
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="hotel-holder">
+        <div class='single-hot' id="hotel-{{item.id}}" *ngFor="let item of hotels">
+                <a routerLink="/hotels/{{item.id}}" >
+                    <img src='{{item.thumbnail}}'>
+                </a>
+                <a href='' id='countryA'>{{item.country}}</a>
+                <a href='#' id='countryB'>{{item.whereabout}}</a>          <br>
+                <a href="" class="single-a"> {{item.title}}</a>
+            <span class="sp-m">Клас отеля</span>
+            <div class="comfort-holer" >
+                <img src="/shared/img/star-small.png" alt=" " *ngFor="let comfort of counterRaiting(item.comfort)">
+            </div>
+            <br>
+            <p class="display">{{item.content}}</p>
+            <div class="cena-d">
+                от<span>{{item.price}}</span> грн.
+                <p>За номер</p>
+                <p class="get-comf">{{item.comfort}}</p>
+            </div>
+        </div>
+</div>

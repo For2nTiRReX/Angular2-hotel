@@ -1,0 +1,330 @@
+*{
+    margin: 0; padding: 0;
+}
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #CCEAE7 url(Img/bg-body.jpg) left top repeat-x;
+    color: #333333;
+    font-size: 85%;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.bg-bot{
+    background:  url("Img/bg-bottom2.jpg") bottom no-repeat
+}    
+    
+.karkas {    
+    display: block;
+    position: relative;
+    width: 990px;
+    min-height: 1024px;
+    margin: 0 auto;
+    z-index: 10;
+}
+.header{
+    display: block;
+    position: relative;
+    height: 100px;
+}
+.header a:first-child{
+    margin: 10px 0 0 0;
+}
+.header a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.head-left{
+    display: block;
+    position: absolute;
+    top:10px;
+    right: 0;
+}
+.head-left a{
+    display: inline;
+    position: relative;
+    margin: 0 5px;
+}
+.head-left p{
+    font-weight: bold;
+    background: #ffa900;
+    padding: 4px 10px;
+    margin: 5px 0;
+   
+}
+.head-center{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 260px;
+}
+.search{
+    margin: 35px 0 5px 0;
+    background: url(Img/search-bg.png) no-repeat;
+    padding-top: 7px;
+}
+.search img{
+    display: block;
+    margin: -3px 0 0 0;
+}
+#search-field{
+ float: left;
+display: block;
+border: solid 1px #FFFFFF;
+width: 260px;
+height: 20px;
+margin: -2px 0 2px 5px;
+padding: 0 4px;
+color: #7A868E;
+background: #FFFFFF;
+font-style: italic;
+}
+.head-center a {
+    font-weight: bold;
+    margin-top: 5px;
+    background: #ffa900; 
+    padding: 3px;
+}
+.head-center a:hover {
+    text-decoration: none;
+}
+.head-center p{
+    color: #1a5079;
+    font-size: 16px;
+    
+}
+.head-center p span{
+    font-weight: bold;
+    
+}
+.menu-main{
+display: block;
+width: 100%;
+height: 43px;
+overflow: hidden;
+}
+
+.menu-main table {
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow: hidden;
+border-collapse: collapse;
+    background: url(Img/main-menu-bg.png) repeat-x left top;
+    
+}
+
+.menu-main a{
+    color: #1a5079;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-left: 1px solid #fff;
+    padding: 14px 14px;                  
+    text-decoration: none;
+    border: none;
+    
+}
+#last{
+    color: #fff;
+    background:  #1a5079;
+}
+
+.menu-main a:hover{
+    color: #fff;
+    background:  #1a5079;
+}
+
+
+.footer{
+    background: #dfdfdf;
+    overflow: hidden;
+    width: 100%;
+}
+.footer a{
+   float: left;
+    padding: 10px;
+}
+.footer p{
+   float: left;
+    font-size: 0.8em;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.foot-r{
+    float: right;
+     padding: 30px 4px;
+}
+.after-head{
+    overflow: hidden;
+    width: 100%;
+    background: #1d5b89;
+    color: #c0e3f4;
+    
+}
+.center{
+    background: #fff;
+    padding: 20px 30px 30px 30px;
+    position: relative;
+    min-height: 800px;
+}
+.center ul{
+    overflow: hidden;
+}
+.center ul li{
+    float: left;
+    list-style: none;
+    padding: 0 5px;
+}
+.center ul li p{
+    font-size: 0.8em;
+    margin-top: 2px;
+}
+.center ul li a{
+    color:#61B7EA;
+      font-size: 0.8em;
+}
+
+
+.center ul li a:hover{
+    text-decoration: none;
+    
+}
+.center h2 {
+    margin: 15px 0;
+}
+.center h2 span{
+    font-size: 0.9em;
+    color: #ADADAD;
+}
+.info-holder{
+    width: 660px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 23px 0 0 0;  
+}
+.info-holder h1{
+    font-size: 1.7em;
+}
+.info-tur{
+    background: #E0F1FA;
+    padding: 10px;
+    margin: 15px 0;
+}
+.info-tur a{
+    color: #5BC8E9;
+    
+}
+.info-tur a:hover{
+    text-decoration: none;
+}
+.info-tur p:first-child{
+    margin-bottom: 15px;
+}
+.info-tur p span{
+    font-weight: bold;
+}
+
+.info-basket-holder{
+    position: absolute;
+    overflow: hidden;
+    width: 290px;
+    height: 380px;
+    background: #E0F1FA;
+    top: 100px;
+    right: -40px;
+}
+.info-basket-holder em{
+    display: block;
+    overflow: hidden;
+    padding: 2px 25px 10px;
+}
+.basket-title{
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 25px 25px 10px 25px;
+}
+.basket-single{
+    display: block;
+    overflow: hidden;
+    padding: 2px 25px 10px;
+    text-align: left;
+}
+.basket-single-l{
+    background: #6CAFE0;
+    border-radius: 100px;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 26px;
+    overflow: hidden;
+    text-align: center;
+    width: 26px;
+}
+.basket-single-r{
+    width: 207px;
+    float: right;
+}
+.basket-single-r p{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.single-tyrist{
+    padding: 20px 15px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.input-box{
+    width: 49%;
+    float: left;
+    overflow: hidden;
+}
+.input-box input{
+    margin: 5px 0;
+    width: 190px;
+    height: 24px;
+    padding: 0 5px;
+    background-color: #e9e9e9;
+    border: 1px solid #a9b4bb;
+    border-radius: 5px;
+    outline: none;
+
+}
+.info-box{
+    width: 49%;
+    float: right;
+}
+.turist-foot {
+    padding: 0 15px;
+    margin: 20px 0 ;
+}
+.search-bascet{
+    position: absolute;
+    background: #fff;
+    width: 297px;
+    top: 67px;
+    left: 261px;
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid #86A0BA;
+    z-index: 100;
+    padding: 10px;
+}
+.single-hotel{
+    padding: 10px 0;
+}
+.single-hotel a{
+    color: #333;
+    text-decoration: none;
+}
+.single-hotel:hover{
+    background: #E0F1FA;
+}

@@ -1,0 +1,7 @@
+Time : 01:12:50
+SQLSTATE[HY000]: General error: 2031 
+Raw SQL : SELECT * FROM hotels LIMIT ?
+
+Time : 01:07:46
+SQLSTATE[HY093]: Invalid parameter number: Columns/Parameters are 1-based
+Raw SQL : SELECT * FROM hotels LIMIT :limit

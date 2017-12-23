@@ -1,0 +1,430 @@
+/*
+* jQuery FlexSlider v2.0
+* http://www.woothemes.com/flexslider/
+*
+* Copyright 2012 WooThemes
+* Free to use under the GPLv2 license.
+* http://www.gnu.org/licenses/gpl-2.0.html
+*
+* Contributing author: Tyler Smith (@mbmufffin)
+*/
+#slider {margin: 0 auto}
+#top  { text-align: center; }
+#top .top-inner  { max-width: 658px; width: auto; }
+#top img  { float: none; display: inline; margin-top: 12px; }
+#container {padding: 10px 40px 10px;}
+#main {overflow: hidden;}
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+* include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {margin:0 0 0 0px; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.2); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1;}
+.flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.loading .flex-viewport {max-height: 300px;}
+.flexslider .slides {zoom: 1;}
+
+.carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a {width: 30px; height: 30px; margin: -20px 0 0; display: block; background: url() no-repeat 0 0; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
+.flex-direction-nav .flex-next {background-position: 100% 0; right: -36px; }
+.flex-direction-nav .flex-prev {left: -36px;}
+.flexslider:hover .flex-next {opacity: 0.8; right: 5px;}
+.flexslider:hover .flex-prev {opacity: 0.8; left: 5px;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
+.flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: 10px; left: 290px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
+    .flex-direction-nav .flex-next {opacity: 1; right: 0;}
+}
+/* MyCss
+*********************************/ 
+
+*{
+    margin: 0; padding: 0;
+}
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background: #CCEAE7 url(Img/bg-body.jpg) left top repeat-x;
+    color: #333333;
+    font-size: 85%;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.bg-bot{
+    position: relative;
+}    
+.bg-bot:before {
+    display: block;
+    position: absolute;
+    content: "";
+    background:  url("Img/bg-bottom2.jpg") bottom no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.karkas {    
+    display: block;
+    position: relative;
+    width: 990px;
+    min-height: 1024px;
+    margin: 0 auto;
+    z-index: 10;
+    overflow: hidden;
+}
+.header{
+    display: block;
+    position: relative;
+    height: 100px;
+}
+.header a:first-child{
+    margin: 10px 0 0 0;
+}
+.header a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.head-left{
+    display: block;
+    position: absolute;
+    top:10px;
+    right: 0;
+}
+.head-left a{
+    display: inline;
+    position: relative;
+    margin: 0 5px;
+}
+.head-left p{
+    font-weight: bold;
+    background: #ffa900;
+    padding: 4px 10px;
+    margin: 5px 0;
+   
+}
+.head-center{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 260px;
+}
+.search{
+    margin: 35px 0 5px 0;
+    background: url(Img/search-bg.png) no-repeat;
+    padding-top: 7px;
+}
+.search img{
+    display: block;
+    margin: -3px 0 0 0;
+}
+#search-field{
+ float: left;
+display: block;
+border: solid 1px #FFFFFF;
+width: 260px;
+height: 20px;
+margin: -2px 0 2px 5px;
+padding: 0 4px;
+color: #7A868E;
+background: #FFFFFF;
+font-style: italic;
+}
+.head-center a {
+    font-weight: bold;
+    margin-top: 5px;
+    background: #ffa900; 
+    padding: 3px;
+}
+.head-center a:hover {
+    text-decoration: none;
+}
+.head-center p{
+    color: #1a5079;
+    font-size: 16px;
+    
+}
+.head-center p span{
+    font-weight: bold;
+    
+}
+.menu-main{
+display: block;
+width: 100%;
+height: 43px;
+overflow: hidden;
+}
+
+.menu-main table {
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow: hidden;
+border-collapse: collapse;
+    background: url(Img/main-menu-bg.png) repeat-x left top;
+}
+.menu-main a{
+    color: #1a5079;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-left: 1px solid #fff;
+    padding: 14px 14px;                  
+    text-decoration: none;
+    
+}
+#last{
+    border: none;
+}
+
+.menu-main a:hover{
+    color: #fff;
+    background:  #1a5079;
+}
+
+
+.after-head {
+    overflow: hidden;
+ display: block;
+ position: relative;
+ width: 100%;
+    background: #fff;
+}
+#main{
+    width: 70%;
+    float: left;
+}
+.slider-right{
+    background: #fff;
+    float: right;
+    padding-left: 2%;
+    width: 28%;
+    height: 375px;
+    overflow: hidden;
+}
+.sl-r-t{
+    background: url(Img/arrow-rightSL.png) no-repeat left center;
+}
+.sl-r-t p{
+    margin: 10px 0 0 20px;
+    font-size: 1.6em; 
+}
+.sl-r-t2 span{
+    font-size: 0.9em; 
+    color: #8a8796;
+}
+.country{
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.country a{
+    color: #1a76c0;
+    font-size: 1.3em;
+    text-decoration: none;
+    float: left;
+}
+.country p{
+    color: #999;
+    float: right;
+    margin: 2px 10px 0 0;
+}
+.country p span{
+    color: #282828;
+    margin: 0 10px;
+}
+.cont-boxes{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.cont-boxes ul {
+    list-style: none;
+    overflow: hidden;
+    background: #fff;
+}
+.cont-boxes ul li{
+    float: left;
+    list-style: none;
+    height: 106px;
+    width: 209px;
+    padding: 19px;
+    position: relative
+}
+.cont-boxes ul li:hover{
+    background: #faf1d4;
+}
+.cont-boxes a{
+    display: block;
+    text-decoration: none;
+    color: #a2a9a4;
+    margin: 0 0 10px 0;
+}
+.box1 a span{
+    font-size: 1.3em;
+    color: #28b4c9;
+    padding: 0 0 5px 0;  
+}
+.box2 a span{
+    font-size: 1.2em;
+    color: #f9b000;
+    padding: 0 0 5px 0;  
+}
+.box3 a span{
+    font-size: 1.3em;
+    color: #1a5079;
+    padding: 0 0 5px 0;  
+}
+.box4 a span{
+    font-size: 1.3em;
+    color: #91c33f;
+    padding: 0 0 5px 0;  
+}
+.top10{
+    background: #fff;
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+}
+.top10 a img{
+    display: block;
+    margin: 0 auto;
+}
+.top-hotel{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    
+}
+.hotels{
+    overflow: hidden;
+    float: left;
+    width: 230px;
+    padding: 10px 8px;
+}
+.cont-boxes2{
+    padding: 10px;
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.cont-boxes2 ul {
+    list-style: none;
+    overflow: hidden;
+}
+.cont-boxes2 ul li{
+    float: left;
+    list-style: none;
+    height: 185px;
+    width: 209px;
+    padding: 19px;
+    position: relative
+}
+.cont-boxes2 ul li:hover{
+    background: #faf1d4;
+}
+.cont-boxes2 a{
+    display: block;
+    text-decoration: none;
+    color: #a2a9a4;
+    margin: 0 0 10px 0;
+    text-align: center;  
+}
+.boxe a span{
+    font-size: 1.3em;
+    color: #1a5079;  
+}
+.why-m{
+    margin-left: 25px;
+    font-size: 1.4em;
+    background: url(Img/arrow-rightSL.png) no-repeat left center;
+    padding:15px;
+}
+.footer{
+    background: #dfdfdf;
+    overflow: hidden;
+    width: 100%;
+}
+.footer a{
+   float: left;
+    padding: 10px;
+}
+.footer p{
+   float: left;
+    font-size: 0.8em;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.foot-r{
+    float: right;
+     padding: 30px 5px;
+}
+.search-bascet{
+    position: absolute;
+    background: #fff;
+    width: 297px;
+    top: 67px;
+    left: 261px;
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid #86A0BA;
+    z-index: 100;
+    padding: 10px;
+}
+.single-hotel{
+    padding: 10px 0;
+}
+.single-hotel a{
+    color: #333;
+    text-decoration: none;
+}
+.single-hotel:hover{
+    background: #E0F1FA;
+}

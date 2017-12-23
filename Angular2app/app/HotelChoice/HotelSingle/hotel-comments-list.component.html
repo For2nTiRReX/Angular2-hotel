@@ -1,0 +1,18 @@
+
+<h1>Comments:</h1>
+<div class="comments-list" *ngIf="comments">
+    <div class="comment-item" *ngFor="let item of comments" id="comment-item-{{item.id}}">
+        <div class="comment-text">
+            {{item.text}}
+        </div>
+        <div class="comment-meta">
+            <div class="date">
+                {{item.date}}
+            </div>
+            <div class="author">
+                {{item.author}}
+            </div>
+        </div>
+    </div>
+</div>
+
